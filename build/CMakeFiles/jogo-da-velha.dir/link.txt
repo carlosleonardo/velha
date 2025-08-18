@@ -1,0 +1,1 @@
+/usr/bin/cc -g "CMakeFiles/jogo-da-velha.dir/main.c.o" -o jogo-da-velha
