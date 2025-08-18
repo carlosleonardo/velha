@@ -63,12 +63,16 @@ int main()
         {
             printf("Entrada inválida. Tente novamente.\n");
             while (getchar() != '\n')
-                ; // Limpa o buffer
+                ;      // Limpa o buffer
+            getchar(); // Espera por uma tecla
             continue;
         }
         if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2 || tabuleiro[linha][coluna] != 0)
         {
             printf("Jogada inválida. Tente novamente.\n");
+            while (getchar() != '\n')
+                ;      // Limpa o buffer
+            getchar(); // Espera por uma tecla
             continue;
         }
         if (verifica_vencedor('X'))
