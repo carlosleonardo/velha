@@ -44,7 +44,7 @@ void desenha_tabuleiro()
     }
 }
 
-int main(int, char **)
+int main()
 {
     bool jogando = true;
 
