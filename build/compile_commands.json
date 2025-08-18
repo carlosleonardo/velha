@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/carlos/Projetos/cpp/velha/build",
-  "command": "/usr/bin/cc   -g -o CMakeFiles/jogo-da-velha.dir/main.c.o -c /home/carlos/Projetos/cpp/velha/main.c",
-  "file": "/home/carlos/Projetos/cpp/velha/main.c",
-  "output": "CMakeFiles/jogo-da-velha.dir/main.c.o"
-}
-]
