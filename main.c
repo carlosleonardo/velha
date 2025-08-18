@@ -49,11 +49,11 @@ int main()
     bool jogando = true;
 
     // Limpar a tela
-    printf("\033[H\033[J");
     int rodada = 0;
-    printf("Jogo da Velha!\n");
     do
     {
+        printf("\033[H\033[J");
+        printf("Jogo da Velha!\n");
         desenha_tabuleiro();
         int linha, coluna;
         char jogador = (rodada % 2 == 0) ? 'X' : 'O';
@@ -86,5 +86,10 @@ int main()
             tabuleiro[linha][coluna] = jogador;
             rodada++;
         }
-    } while (jogando);
+    } while (jogando && rodada < 9);
+    if (rodada == 9)
+    {
+        printf("Empate!\n");
+    }
+    return 0;
 }
