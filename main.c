@@ -75,19 +75,14 @@ int main()
             getchar(); // Espera por uma tecla
             continue;
         }
-        if (verifica_vencedor('X'))
+        tabuleiro[linha][coluna] = jogador;
+        if (verifica_vencedor(jogador))
         {
-            printf("Jogador X venceu!\n");
-            jogando = false;
-        }
-        else if (verifica_vencedor('O'))
-        {
-            printf("Jogador O venceu!\n");
+            printf("Jogador %c venceu!\n", jogador);
             jogando = false;
         }
         else
         {
-            tabuleiro[linha][coluna] = jogador;
             rodada++;
         }
     } while (jogando && rodada < 9);
