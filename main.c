@@ -48,10 +48,10 @@ int main()
 {
     bool jogando = true;
 
-    // Limpar a tela
     int rodada = 0;
     do
     {
+        // Limpar a tela
         printf("\033[H\033[J");
         printf("Jogo da Velha!\n");
         desenha_tabuleiro();
