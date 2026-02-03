@@ -58,13 +58,12 @@ int main()
         int linha, coluna;
         char jogador = (rodada % 2 == 0) ? 'X' : 'O';
         printf("Jogador %c, digite a linha e a coluna (0-2): ", jogador);
-        int lidos = scanf("%d %d", &linha, &coluna);
+        const int lidos = scanf("%d %d", &linha, &coluna);
         if (lidos != 2)
         {
             printf("Entrada inválida. Tente novamente.\n");
             while (getchar() != '\n')
                 ;      // Limpa o buffer
-            getchar(); // Espera por uma tecla
             continue;
         }
         if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2 || tabuleiro[linha][coluna] != 0)
@@ -72,7 +71,6 @@ int main()
             printf("Jogada inválida. Tente novamente.\n");
             while (getchar() != '\n')
                 ;      // Limpa o buffer
-            getchar(); // Espera por uma tecla
             continue;
         }
         tabuleiro[linha][coluna] = jogador;
