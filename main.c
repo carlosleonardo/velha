@@ -1,5 +1,14 @@
+/**
+ * Jogo da Velha em C
+ * Autor: Carlos Leonardo Goes Farias
+ * Data: 20/02/2026
+ *
+ * Este programa implementa um jogo da velha simples para dois jogadores.
+ * Os jogadores alternam turnos para marcar suas jogadas no tabuleiro.
+ * O programa verifica o vencedor após cada jogada e exibe o resultado.
+ */
+
 #include <stdio.h>
-#include <stdbool.h>
 
 char tabuleiro[3][3];
 
