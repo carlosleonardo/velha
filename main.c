@@ -11,10 +11,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-char tabuleiro[3][3];
+static char tabuleiro[3][3];
 
 // Verifica qual é o vencedor do jogo
-bool verifica_vencedor(char jogador)
+static bool verifica_vencedor(char jogador)
 {
     // Verifica linhas
     for (int i = 0; i < 3; i++)
@@ -40,7 +40,7 @@ bool verifica_vencedor(char jogador)
 }
 
 // Desenha um tabuleiro de jogo da velha
-void desenha_tabuleiro()
+static void desenha_tabuleiro()
 {
     printf("  0 1 2\n");
     for (int i = 0; i < 3; i++)
@@ -75,6 +75,11 @@ int main()
             while (getchar() != '\n')
                 ; // Limpa o buffer
             continue;
+        }
+        if (feof(stdin))
+        {
+            printf("Fim de arquivo detectado. Saindo do jogo.\n");
+            break;
         }
         if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2 || tabuleiro[linha][coluna] != 0)
         {
